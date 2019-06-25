@@ -23,7 +23,7 @@ describe('filter function', () => {
     it('returns filtered array from callback if thruthy', () => {
         const numbers = [1, 2, 3];
         const filtered = filter(numbers, number => number > 2);
-        expect(filtered).toEqual([undefined, undefined, 3]);
+        expect(filtered).toEqual([3]);
     });
 });
 
