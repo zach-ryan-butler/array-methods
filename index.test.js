@@ -18,7 +18,10 @@ describe('filter function', () => {
     it('iterates over array and returns same array length', () => {
         const numbers = [1, 2, 3];
         const filtered = filter(numbers, number => number * 2);
-        expect(filtered).toEqual()
+        expect(filtered).toHaveLength(numbers.length);
+    });
+    it('returns filtered array from callback if thruthy', () => {
+        const numbers = 
     });
 });
 
