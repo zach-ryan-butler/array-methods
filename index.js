@@ -16,4 +16,10 @@ function filter(arr, callback) {
     return filtered;
 }
 
-module.exports = { map, filter };
+function findIndex(arr, callback) {
+    for(let i = 0; i < arr.length; i++) {
+        return i;
+    }
+}
+
+module.exports = { map, filter, findIndex };
