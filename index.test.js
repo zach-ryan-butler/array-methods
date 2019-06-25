@@ -21,7 +21,9 @@ describe('filter function', () => {
         expect(filtered).toHaveLength(numbers.length);
     });
     it('returns filtered array from callback if thruthy', () => {
-        const numbers = 
+        const numbers = [1, 2, 3];
+        const filtered = filter(numbers, number => number > 2);
+        expect(filtered).toEqual([undefined, undefined, 3]);
     });
 });
 
