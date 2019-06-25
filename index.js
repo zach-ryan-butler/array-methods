@@ -1,9 +1,19 @@
-const map = function map(arr, callback) {
-    const array = [];
+function map(arr, callback) {
+    const mapped = [];
     for(let i = 0; i < arr.length; i++) {
-        array[i] = callback(arr[i]);
+        mapped[i] = callback(arr[i]);
     }
-    return array;
-};
+    return mapped;
+}
 
-module.exports = { map };
+function filter(arr, callback) {
+    const filtered = [];
+    for(let i = 0; i < arr.length; i++) {
+        if(callback(arr[i])) {
+            filtered[i] = arr[i];
+        }
+    }
+    return filtered;
+}
+
+module.exports = { map, filter };
