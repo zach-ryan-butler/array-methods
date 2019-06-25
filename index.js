@@ -18,8 +18,11 @@ function filter(arr, callback) {
 
 function findIndex(arr, callback) {
     for(let i = 0; i < arr.length; i++) {
-        return i;
+        if(callback(arr[i])) {
+            return i;
+        }
     }
+    return -1;
 }
 
 module.exports = { map, filter, findIndex };

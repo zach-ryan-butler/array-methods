@@ -30,8 +30,18 @@ describe('filter function', () => {
 describe('findIndex method', () => {
     it('returns an indice', () => {
         const numbers = [1, 2, 3];
-        const foundIndex = findIndex(numbers);
+        const foundIndex = findIndex(numbers, number => number === 1);
         expect(foundIndex).toEqual(0);
+    });
+    it('returns an indice that passes condition', () => {
+        const numbers = [1, 2, 3];
+        const foundIndex = findIndex(numbers, number => number > 2);
+        expect(foundIndex).toEqual(2);
+    });
+    it('returns -1 if findIndex cannot find index', () => {
+        const numbers = [1, 2, 3];
+        const foundIndex = findIndex(numbers, number => number > 10);
+        expect(foundIndex).toEqual(-1);
     });
 });
 
